@@ -23,16 +23,20 @@ html {
 body {
     font-size: 1.6rem;
     color: var(--color_gray);
-
+    margin: 0;
+    padding: 0;
 }
 .contentWrap {
-    width: 900px;
+    width: 800px;
     margin: 0 auto;
+    padding: 60px 0;
 }
 img {
     width: 300px;
 }
-
+h2 {
+    margin: 0;
+}
 a {
     color: var(--color_yellow);
 }
@@ -61,6 +65,7 @@ header {
     text-decoration: none;
     padding: 8px;
     border-radius: 4px;
+    display: inline-block;
 }
 .projects .btn:hover {
     background-color: rgba(47,48,97, .8);
