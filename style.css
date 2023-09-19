@@ -9,16 +9,21 @@ but im lazy to copy paste everytime
     --color_yellow: #ffe66d;
     --color_blueLight: #a1c6d7;
 }
-*{
-    margin: 0;
+*,
+::before,
+::after{
     box-sizing: border-box;
 }
-/* Global Styles */
+/* Global Styles 
+----------------------------------
+*/
 html {
     font-size: 62.5%;
 }
 body {
     font-size: 1.6rem;
+    color: var(--color_gray);
+
 }
 
 img {
@@ -31,9 +36,16 @@ a {
 a:hover {
     text-decoration: none;
 }
-/* Profile */ 
+/* Profiles 
+----------------------------------
+*/
+header {
+    background: var(--color_blueDark);
 
-/* Projects */
+}
+/* Projects 
+----------------------------------
+*/
 .projects {
     background: var(--color_white);
 }
@@ -49,4 +61,19 @@ a:hover {
 }
 .projects .btn:hover {
     background-color: rgba(47,48,97, .8);
+}
+/* Work Experience 
+----------------------------------
+*/
+.workExperience {
+    background: var(--color_blueLight);
+}
+/* Education 
+----------------------------------
+*/
+/* Contact 
+----------------------------------
+*/
+footer {
+    background: var(--color_gray);
 }
