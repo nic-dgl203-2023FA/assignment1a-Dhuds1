@@ -26,13 +26,15 @@ a:hover {
 .projects {
     background: #f7fff7;
 }
-.projects a {
+/* .projects a {
+} */
+.projects .btn {
     color: #f7fff7;
     background-color: #2f3061;
     text-decoration: none;
     padding: 8px;
     border-radius: 4px;
 }
-.projects a:hover {
+.projects .btn:hover {
     background-color: rgba(47,48,97, .8);
 }
