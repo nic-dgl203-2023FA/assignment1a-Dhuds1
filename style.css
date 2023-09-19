@@ -25,7 +25,10 @@ body {
     color: var(--color_gray);
 
 }
-
+.contentWrap {
+    width: 900px;
+    margin: 0 auto;
+}
 img {
     width: 300px;
 }
@@ -41,7 +44,7 @@ a:hover {
 */
 header {
     background: var(--color_blueDark);
-
+    color: var(--color_white);
 }
 /* Projects 
 ----------------------------------
@@ -76,4 +79,5 @@ header {
 */
 footer {
     background: var(--color_gray);
+    color: var(--color_white);
 }
