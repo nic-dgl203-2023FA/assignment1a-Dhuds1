@@ -1,7 +1,12 @@
 :root {
-    --white:var(--white);
-    --black:var(--black);
-    --dark-blue:var(--dark-blue);
-    --light-blue:var(--light-blue);
-    --yellow:var(--yellow);
+    --color_white: #f7fff7;
+    --color_gray: #343434;
+    --color_blueDark: #2f3061;
+    --color_yellow: #ffe66d;
+    --color_blueLight: #a1c6d7;
+}
+*,
+::before,
+::after{
+    box-sizing: border-box;
 }
