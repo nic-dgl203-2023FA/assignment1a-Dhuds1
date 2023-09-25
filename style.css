@@ -1,0 +1,7 @@
+:root {
+    --white:var(--white);
+    --black:var(--black);
+    --dark-blue:var(--dark-blue);
+    --light-blue:var(--light-blue);
+    --yellow:var(--yellow);
+}
