@@ -10,3 +10,7 @@
 ::after{
     box-sizing: border-box;
 }
+/* Test comment */
+BODY {
+    background-color: #2f3061;
+}
