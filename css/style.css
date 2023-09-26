@@ -10,6 +10,24 @@
 ::after{
     box-sizing: border-box;
 }
+/* GLOBAL  Styles
+----------------------------------*/
+body {
+    color: var(--color_gray);
+}
 img {
     width: 300px;
 }
+/* PROFILE Styles
+----------------------------------*/
+header {
+    
+}
+/* PROJECT  Styles
+----------------------------------*/
+
+/* WORK EXPERIENCE  Styles
+----------------------------------*/
+
+/* CONTACT INFO  Styles
+----------------------------------*/
