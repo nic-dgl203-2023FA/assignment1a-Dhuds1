@@ -18,6 +18,12 @@ body {
 img {
     width: 300px;
 }
+a {
+    color: var(--color_yellow);
+}
+a:hover {
+    text-decoration: none;
+}
 /* PROFILE Styles
 ----------------------------------*/
 header {
@@ -28,6 +34,19 @@ header {
 ----------------------------------*/
 .projects{
     background-color: var(--color_white);
+}
+.projects a {
+    color: var(--color_blueDark)
+}
+.projects .btn{
+    color: var(--color_white);
+    background-color: var(--color_blueDark);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+}
+.projects .btn:hover {
+    background-color: rgba(47, 48, 97, .8);
 }
 /* WORK EXPERIENCE  Styles
 ----------------------------------*/
