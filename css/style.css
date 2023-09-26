@@ -24,6 +24,10 @@ a {
 a:hover {
     text-decoration: none;
 }
+.contentWrap {
+    width: 800px;
+    margin: 0 auto;
+}
 /* PROFILE Styles
 ----------------------------------*/
 header {
