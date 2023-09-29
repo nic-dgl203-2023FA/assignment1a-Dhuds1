@@ -92,6 +92,11 @@ header {
 .workExperience{
     background-color: var(--color_blueLight);
 }
+.jobItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
 /* CONTACT INFO  Styles
 ----------------------------------*/
 
