@@ -54,6 +54,7 @@ h1, h2 {
 header {
     background-color: var(--color_blueDark);
     color: var(--color_white);
+    text-align: center;
 }
 /* PROJECT  Styles
 ----------------------------------*/
@@ -83,6 +84,9 @@ header {
     float: left;
     margin-right: 20px;
 }
+.projectItem h3 {
+    margin-top: 0;
+}
 /* WORK EXPERIENCE  Styles
 ----------------------------------*/
 .workExperience{
@@ -94,4 +98,15 @@ header {
 footer {
     background-color: var(--color_gray);
     color: var(--color_white);
+    text-align: center;
+}
+.contactList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.contactList a {
+    padding: 15px;
+    display: inline-block;
 }
