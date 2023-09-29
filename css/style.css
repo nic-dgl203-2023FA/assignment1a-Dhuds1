@@ -127,8 +127,6 @@ footer {
 .contactList {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 .contactList a {
     padding: 15px;
@@ -141,7 +139,6 @@ footer {
         float: left;
         margin-right: 20px;
     }
-
     .jobItem {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -149,5 +146,22 @@ footer {
     }
     header, footer {
         text-align: center;
+    }
+    .contactList {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 749px) {
+    h1 {
+        font-size: 75px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+    h2 {
+        line-height:1;
+    }
+    .contactList a{
+        padding: 5px;
     }
 }
