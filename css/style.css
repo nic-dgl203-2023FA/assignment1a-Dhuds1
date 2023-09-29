@@ -5,10 +5,13 @@
     --color_yellow: #ffe66d;
     --color_blueLight: #a1c6d7;
 }
-*,
-::before,
-::after{
+html {
     box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
 }
 /* GLOBAL  Styles
 ----------------------------------*/
@@ -70,6 +73,15 @@ header {
 }
 .projects .btn:hover {
     background-color: rgba(47, 48, 97, .8);
+}
+.projectItem {
+    overflow: hidden;
+    border-bottom: 1px dashed var(--color_gray);
+    padding: 25px 0;
+}
+.projectItem img{
+    float: left;
+    margin-right: 20px;
 }
 /* WORK EXPERIENCE  Styles
 ----------------------------------*/
