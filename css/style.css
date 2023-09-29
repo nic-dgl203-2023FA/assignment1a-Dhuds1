@@ -73,7 +73,6 @@ h3 {
 header {
     background-color: var(--color_blueDark);
     color: var(--color_white);
-    text-align: center;
 }
 
 /* PROJECT  Styles
@@ -98,10 +97,6 @@ header {
 .projectItem {
     overflow: hidden;
 }
-.projectItem img{
-    float: left;
-    margin-right: 20px;
-}
 .projectItem h3 {
     margin-top: 0;
 }
@@ -110,11 +105,6 @@ header {
 ----------------------------------*/
 .workExperience{
     background-color: var(--color_blueLight);
-}
-.jobItem {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
 }
 
 /* EDUCATION Styles
@@ -133,7 +123,6 @@ header {
 footer {
     background-color: var(--color_gray);
     color: var(--color_white);
-    text-align: center;
 }
 .contactList {
     list-style-type: none;
@@ -144,4 +133,21 @@ footer {
 .contactList a {
     padding: 15px;
     display: inline-block;
+}
+/* RESPONSIVE Styles
+----------------------------------*/
+@media screen and (min-width:750px){
+    .projectItem img{
+        float: left;
+        margin-right: 20px;
+    }
+
+    .jobItem {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+    }
+    header, footer {
+        text-align: center;
+    }
 }
