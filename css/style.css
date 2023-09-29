@@ -37,6 +37,13 @@ a:hover {
     margin: 0 auto;
     padding: 60px 0;
 }
+.divider > section{
+    border-bottom: 1px dashed var(--color_gray);
+    padding: 25px 0;
+}
+.divider > section:last-of-type {
+    border-bottom: none;
+}
 h2 {
     font-size: 45px;
 }
@@ -86,8 +93,6 @@ header {
 }
 .projectItem {
     overflow: hidden;
-    border-bottom: 1px dashed var(--color_gray);
-    padding: 25px 0;
 }
 .projectItem img{
     float: left;
