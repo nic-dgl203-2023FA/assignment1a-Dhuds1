@@ -67,7 +67,30 @@ h3 {
 .itemDetails h3 ~ p {
     margin: 0;
 }
+/* NAV BAR Styles 
+----------------------------------*/
+nav {
+    height: 75px;
+    position: fixed;
+}
+nav ul {
+    display: flex;
+    background-color: orange;
+    position: relative;
+    z-index: 1000;
 
+}
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li a {
+    padding: 15px 20px;
+    margin-inline: 10px;
+}
+nav ul li a:hover {
+    background-color: pink;
+}
 /* PROFILE Styles
 ----------------------------------*/
 header {
