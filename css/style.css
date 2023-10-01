@@ -44,11 +44,15 @@ a:hover {
     padding: 60px 0;
 }
 .divider > section{
-    border-bottom: 1px dashed var(--color_gray);
-    padding: 25px 0;
+    padding: 25px 25px;
+    margin-bottom: 50px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 0 0 black;
 }
-.divider > section:last-of-type {
-    border-bottom: none;
+.divider > section > img {
+    -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
+    clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
+    border: 2px solid black;
 }
 h2 {
     font-size: 45px;
