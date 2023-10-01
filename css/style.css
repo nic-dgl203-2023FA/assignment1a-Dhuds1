@@ -228,20 +228,20 @@ Js camelCase, php snack_case, css B.E.M
 /* inspiration from GUMROAD for the transition effect, not perfect https://gumroad.com/*/
 .animation__pop-out {
     box-shadow: 0 0 0 0 var(--color_charGray);
-
     transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
 }
 .animation__pop-out:hover {
+    cursor: url(../images/drag_click_FILL1_wght300_GRAD200_opsz24.png) 1 1, not-allowed;
     box-shadow: 10px 10px 0 0 var(--color_charGray);
     transform: translate(-10px, -10px);
     transition: all 300ms ease-in-out;
 }
-.animation__slice-corners {
+.animation__slice-corners img{
     border: 2px solid var(--color_charGray);
     clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
     transition: clip-path 300ms ease-in-out;
 }
-.animation__slice-corners:hover {
+.animation__slice-corners:hover img{
     -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
     clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
     border: 2px solid var(--color_charGray);
