@@ -51,27 +51,11 @@ a:hover {
     padding: 25px 25px;
     margin-bottom: 50px;
     border: 2px solid var(--color_charGray);
-    box-shadow: 0 0 0 0 var(--color_charGray);
-
-    transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
 }
-/* inspiration from GUMROAD for the transition effect, not perfect */
-.divider > section:hover {
-    box-shadow: 10px 10px 0 0 var(--color_charGray);
-    transform: translate(-10px, -10px);
-    transition: all 300ms ease-in-out;
-}
-.divider > section > img {
-    -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
-    clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
-    border: 2px solid var(--color_charGray);
-        transition: clip-path 300ms ease-in-out;
-
-}
-.divider > section > img:hover {
-    clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
-    transition: clip-path 300ms ease-in-out;
-}
+/* inspiration from GUMROAD for the transition effect, not perfect
+thinking about this more, it would've been better to create a class with the animations on them.
+Imma do that now...
+*/
 h2 {
     font-size: 45px;
     letter-spacing: -1px;
@@ -194,14 +178,9 @@ header{
     text-decoration: none;
     border-radius: 4px;
     display: inline-block;
-    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
 }
 .projects .btn:hover {
     background-color: rgba(47, 48, 97,);
-    color: yellow;
-    box-shadow: 4px 4px var(--color_cyan),
-                -4px -4px var(--color_magenta);
-    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
 }
 .projectItem {
     background-color: var(--color_white);
@@ -241,6 +220,43 @@ footer {
 .contactList a {
     padding: 15px;
     display: inline-block;
+}
+
+/* ANIMATIONS Styles
+----------------------------------*/
+/* Trying to learn to use B.E.M naming convention.
+I like the idea of using a different for each css, js and php, idk if thats good practice.  
+Js camelCase, php snack_case, css B.E.M
+*/
+.animation__color-split {
+    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+}
+.animation__color-split:hover {
+    box-shadow: 4px 4px var(--color_cyan),
+                -4px -4px var(--color_magenta);
+    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+}
+.animation__pop-out {
+    box-shadow: 0 0 0 0 var(--color_charGray);
+
+    transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
+}
+.animation__pop-out:hover {
+    box-shadow: 10px 10px 0 0 var(--color_charGray);
+    transform: translate(-10px, -10px);
+    transition: all 300ms ease-in-out;
+}
+.animation__slice-corners {
+    border: 2px solid var(--color_charGray);
+    clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+    transition: clip-path 300ms ease-in-out;
+}
+.animation__slice-corners:hover {
+    -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
+    clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
+    border: 2px solid var(--color_charGray);
+        transition: clip-path 300ms ease-in-out;
+
 }
 /* RESPONSIVE Styles
 ----------------------------------*/
