@@ -52,26 +52,24 @@ a:hover {
 }
 h2 {
     font-size: 45px;
+    letter-spacing: -1px;
 }
 h1 {
-    font-size: 100px;
-    line-height: 1;
+    font-size: 75px;
+    line-height: 1; 
 }
-h1, h2{
+h2{
+    color: white;
+        text-shadow: 2px 2px 0px #000,
+                  -2px -2px 0 yellow,
+                  5px 5px 0px cyan, 
+                  -5px -5px 0px magenta;
     margin: 0;
     font-family: 'Rubik Glitch', cursive;
     font-weight: 400;
-}
-.h1::before {
-    position: absolute;
-    display: block;
-    top: 10px;
-    z-index: 100000;
-    color: pink;
-    width: 100%;
-    height: 100%;
-    background-color: #a1c6d7;
-    content: "hello";
+    position: relative;
+    z-index: 3;
+    word-spacing: 10px;
 }
 h3 {
     margin-bottom: 0;
@@ -215,9 +213,6 @@ footer {
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 20px;
-    }
-    header, footer {
-        text-align: center;
     }
     .contactList {
         display: flex;
