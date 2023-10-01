@@ -58,14 +58,14 @@ h1 {
     font-size: 75px;
     line-height: 1; 
 }
-h2{
+h1, h2{
     color: white;
-        text-shadow: 2px 2px 0px #000,
-                  -2px -2px 0 yellow,
-                  5px 5px 0px cyan, 
-                  -5px -5px 0px magenta;
+    text-shadow: -2px 2px 0px #000,
+                -1px -3px 3px rgba(255, 255, 0, .7),
+                3px 3px 3px rgba(0, 255, 255, .7), 
+                -5px -5px 3px rgba(255, 0, 255, .7);
     margin: 0;
-    font-family: 'Rubik Glitch', cursive;
+    font-family: 'Sedgwick Ave Display', cursive;
     font-weight: 400;
     position: relative;
     z-index: 3;
@@ -79,6 +79,9 @@ h3 {
 }
 .itemDetails h3 ~ p {
     margin: 0;
+}
+footer, header {
+    text-align: center;
 }
 /* NAV BAR Styles 
 ----------------------------------*/
@@ -135,8 +138,8 @@ nav ul li a:hover:not(.nav__list--logo) {
     justify-content: center;
     gap: 20px;
 }
-.nav__list--logo:hover {
-    background-color: inherit;
+.nav__list--logo h2 {
+    font-size: 30px;
 }
 /* PROFILE Styles
 ----------------------------------*/
