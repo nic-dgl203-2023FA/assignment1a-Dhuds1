@@ -1,9 +1,12 @@
 :root {
     --color_white: #f7fff7;
-    --color_gray: #343434;
-    --color_blueDark: #2f3061;
+    --color_charGray: #242F36;
     --color_yellow: #ffe66d;
     --color_blueLight: #a1c6d7;
+
+    --color_cyan: rgba(0, 255, 255, .7);
+    --color_magenta: rgba(255, 0, 255, .7);
+    --color_yellow: rgba(255, 255, 0, .7);
 }
 html {
     font-size: 62.5%;
@@ -19,7 +22,7 @@ html {
 /* GLOBAL  Styles
 ----------------------------------*/
 body {
-    color: var(--color_gray);
+    color: var(--color_charGray);
     margin: 0;
     padding: 0;
 
@@ -27,6 +30,9 @@ body {
     
     font-size: 15px;
     line-height: 1.5;
+}
+main {
+    background-image: url(../images/texture.jpg);
 }
 img:not(.logo) {
     width: 300px;
@@ -46,13 +52,23 @@ a:hover {
 .divider > section{
     padding: 25px 25px;
     margin-bottom: 50px;
-    border: 2px solid black;
-    box-shadow: 10px 10px 0 0 black;
+    border: 2px solid var(--color_charGray);
+    transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out;
+}
+.divider > section:hover {
+    box-shadow: 10px 10px 0 0 var(--color_charGray);
+    transition: all 300ms ease-in-out;
 }
 .divider > section > img {
     -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
     clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
-    border: 2px solid black;
+    border: 2px solid var(--color_charGray);
+        transition: clip-path 300ms ease-in-out;
+
+}
+.divider > section > img:hover {
+    clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+    transition: clip-path 300ms ease-in-out;
 }
 h2 {
     font-size: 45px;
@@ -64,10 +80,10 @@ h1 {
 }
 h1, h2{
     color: white;
-    text-shadow: -2px 2px 0px #000,
-                -1px -3px 3px rgba(255, 255, 0, .7),
-                3px 3px 3px rgba(0, 255, 255, .7), 
-                -5px -5px 3px rgba(255, 0, 255, .7);
+    text-shadow: -2px 2px 0px var(--color_charGray),
+                -1px -3px 3px var(--color_yellow),
+                3px 3px 3px var(--color_cyan), 
+                -5px -5px 3px var(--color_magenta);
     margin: 0;
     font-family: 'Sedgwick Ave Display', cursive;
     font-weight: 400;
@@ -90,7 +106,7 @@ footer, header {
 /* NAV BAR Styles 
 ----------------------------------*/
 nav {
-    background-color: var(--color_blueDark);
+    background-color: var(--color_charGray);
 
     box-shadow: 0 5px 10px #00000050;
 
@@ -149,29 +165,37 @@ nav ul li a:hover:not(.nav__list--logo) {
 ----------------------------------*/
 header{
     color: var(--color_white);
-    background-color: var(--color_blueDark);
+    background-color: var(--color_charGray);
 }
 
 /* PROJECT  Styles
 ----------------------------------*/
 .projects{
-    background-color: var(--color_white);
+    background: url(../images/texture.jpg),  var(--color_white);
+    background-size: cover;
+    background-position: 50% 50%;
 }
 .projects a {
-    color: var(--color_blueDark)
+    color: var(--color_charGray)
 }
 .projects .btn{
     color: var(--color_white);
-    background-color: var(--color_blueDark);
+    background-color: var(--color_charGray);
     padding: 8px;
     text-decoration: none;
     border-radius: 4px;
     display: inline-block;
+    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
 }
 .projects .btn:hover {
-    background-color: rgba(47, 48, 97, .8);
+    background-color: rgba(47, 48, 97,);
+    color: yellow;
+    box-shadow: 4px 4px var(--color_cyan),
+                -4px -4px var(--color_magenta);
+    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
 }
 .projectItem {
+    background-color: var(--color_white);
     overflow: hidden;
 }
 .projectItem h3 {
@@ -198,7 +222,7 @@ header{
 /* CONTACT INFO  Styles
 ----------------------------------*/
 footer {
-    background-color: var(--color_gray);
+    background-color: var(--color_charGray);
     color: var(--color_white);
 }
 .contactList {
