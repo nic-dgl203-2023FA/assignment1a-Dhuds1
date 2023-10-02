@@ -136,10 +136,16 @@ nav ul li a, .nav__list--logo h2{
 .nav__list--logo h2 {
     font-size: 30px;
 }
-/* PROFILE Styles
+/* ABOUT Styles
 ----------------------------------*/
+.heroBlock {
+    height: 100vh;
+}
 header{
+    width: 100%;
     color: var(--color_white);
+    position: fixed;
+    z-index: -3;
 }
 
 /* PROJECT  Styles
@@ -149,7 +155,7 @@ header{
     height: 100%;
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: -10;
     background: url(../images/texture.jpg),  var(--color_white);
     background-attachment: fixed;
     background-size: cover;
@@ -288,15 +294,16 @@ Js camelCase, php snack_case, css B.E.M
         20px -30px 30px var(--color_yellow),
         30px 30px 30px var(--color_cyan),
         -50px  50px 30px var(--color_magenta);
-        transform: rotate3d(-10, 60, 10, 30deg);
+        transform: perspective(400px    ), rotate3d(-10, 60, 10, 30deg);
     }
     70% {
       text-shadow: 
         -4px -6px 8px var(--color_charGray),
         -30px -30px 40px var(--color_yellow),
         -30px 30px 40px var(--color_cyan),
-        -50px  -50px 40px var(--color_magenta)
-        ;
+        -80px  -20px 40px var(--color_magenta);
+        transform: rotate3d(-10, 30, -5, 30deg);
+
     }
     100% {
       text-shadow: 
