@@ -49,11 +49,11 @@ a:hover {
 .divider > section{
     position: relative;
     padding: 25px 25px;
-    margin-bottom: 50px;
     border: 2px solid var(--color_charGray);
 }
 
 h2 {
+    color: rgba(255, 255, 255, .8);
     font-size: 45px;
     letter-spacing: -1px;
     text-shadow: -2px 2px 0px var(--color_charGray),
@@ -67,7 +67,6 @@ h1 {
     line-height: 1;
 }
 h1, h2{
-    color: rgba(255, 255, 255, .8);
     font-family: 'Sedgwick Ave Display', cursive;
     font-weight: 400;
     position: relative;
@@ -85,6 +84,25 @@ h3 {
 }
 footer, header {
     text-align: center;
+}
+
+/* CUSTOM GLOBAL Styles
+--------------------------------- */
+.padding-bottom--none {
+    padding-bottom: none;
+}
+.outline--text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 3px #ffffff;
+}
+.outline--text-stroke-bold {
+    color: transparent;
+    -webkit-text-stroke: 3px #ffffff;
+}
+.outline--text-stroke-light {
+    color: transparent;
+    font-size: 55px;
+    -webkit-text-stroke: 2px #ffffff;
 }
 /* NAV BAR Styles 
 ----------------------------------*/
@@ -139,7 +157,7 @@ nav ul li a, .nav__list--logo h2{
 /* ABOUT Styles
 ----------------------------------*/
 .heroBlock {
-    height: 100vh;
+    height: 600px;
 }
 header{
     width: 100%;
@@ -164,6 +182,7 @@ header{
 }
 .projects {
     background-color: var(--color_white);
+    padding-block: 20px;
 }
 .projects a {
     color: var(--color_charGray)
@@ -182,6 +201,7 @@ header{
 .projectItem {
     background-color: var(--color_white);
     overflow: hidden;
+    margin-bottom: 50px;
 }
 .projectItem h3 {
     margin-top: 0;
@@ -192,7 +212,54 @@ header{
 .workExperience{
     background-color: var(--color_blueLight);
 }
+section.jobItem { /* Needs higher specificity to override section > divider. Could prob remove, no time though.*/
+    display: grid;
+    padding: 0;
+    grid-template-columns: 1fr 2fr;
+    position: relative;
+    text-transform: uppercase;
+    position: relative;
+}
+.jobDetail {
+    padding: 50px;
+}
+.jobItem > * {
+    grid-column: 2;
+}
+.jobItem h3 {
+    font-size: 3.6rem;
+    margin: 0;
+    line-height: 1;
+}
+.jobItem h4{
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+.jobItem--timeline {
+    width: 100%;
+    height: 100%;
+    background-color: violet;
+    grid-column: 1;
+}
+.jobItem--timeline div {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.jobItem--timeline div::before, 
+.jobItem--timeline div::after {
+    content: "";
+    width: 100%;
+    height: 100%;
 
+    position: absolute;
+    background-color: #ffe66d;
+    top: 0;
+    left: 0;
+}
 /* EDUCATION Styles
 ----------------------------------*/
 .education {
@@ -276,7 +343,6 @@ Js camelCase, php snack_case, css B.E.M
     transition: all 200ms ease-out;
 }.animation__title--text-shadow {
     animation: spotlight 2.5s ease-in-out   forwards running;
-    transform-style: preserve-3d;
   }
   
   @keyframes spotlight {
@@ -293,8 +359,7 @@ Js camelCase, php snack_case, css B.E.M
         -6px -8px 10px var(--color_charGray),
         20px -30px 30px var(--color_yellow),
         30px 30px 30px var(--color_cyan),
-        -50px  50px 30px var(--color_magenta);
-        transform: perspective(400px    ), rotate3d(-10, 60, 10, 30deg);
+        -40px  30px 30px var(--color_magenta);
     }
     70% {
       text-shadow: 
@@ -302,7 +367,6 @@ Js camelCase, php snack_case, css B.E.M
         -30px -30px 40px var(--color_yellow),
         -30px 30px 40px var(--color_cyan),
         -80px  -20px 40px var(--color_magenta);
-        transform: rotate3d(-10, 30, -5, 30deg);
 
     }
     100% {
@@ -321,11 +385,6 @@ Js camelCase, php snack_case, css B.E.M
     .projectItem img{
         margin-right: 20px;
         float: left;
-    }
-    .jobItem {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 20px;
     }
     .contactList {
         display: flex;
