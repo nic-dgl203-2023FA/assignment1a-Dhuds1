@@ -412,6 +412,9 @@ Js camelCase, php snack_case, css B.E.M
 .animation__link--border-bottom li a:hover {
     color: var(--color_cyan);
 }
+.animation__link--border-bottom li a:active {
+    color: var(--color_magenta);
+}
 .animation__link--border-bottom li a::before,
 .animation__link--border-bottom li a {
     transition: all 200ms ease-out;
