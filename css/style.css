@@ -201,6 +201,10 @@ nav ul li a, .nav__list--logo{
 
 /* ABOUT Styles
 ----------------------------------*/
+.aboutMe {
+    color: var(--color_charGray);
+    background-color: var(--color_white);
+}
 
 /* PROJECT  Styles
 ----------------------------------*/
