@@ -235,6 +235,11 @@ header{
     overflow: hidden;
     margin-bottom: 50px;
 }
+.projectItem img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
 .projectItem h3 {
     margin-top: 0;
 }
@@ -323,6 +328,7 @@ section.jobItem { /* Needs higher specificity to override section > divider. Cou
     left: -10px;
     transform:scale(1);
     border: 2px solid var(--color_charGray);
+    pointer-events: none;
 }
 /* CONTACT INFO  Styles
 ----------------------------------*/
