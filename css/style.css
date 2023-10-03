@@ -401,43 +401,7 @@ footer {
 }
 .contactList a {
     padding: 15px;
-    display: inline-block;
-}
-.animation__title--text-shadow {
-    animation: spotlight 2.5s ease-in-out   forwards running;
-}
-@keyframes spotlight {
-0% {
-    text-shadow: 
-    2px -2px 10px var(--color_charGray),
-    1px 3px 10px var(--color_yellow),
-    -3px 3px 10px var(--color_cyan),
-    5px -5px 10px var(--color_magenta); 
-}
-
-40% {
-    text-shadow: 
-    -6px -8px 10px var(--color_charGray),
-    20px -30px 30px var(--color_yellow),
-    30px 30px 30px var(--color_cyan),
-    -40px  30px 30px var(--color_magenta);
-}
-70% {
-    text-shadow: 
-    -4px -6px 8px var(--color_charGray),
-    -30px -30px 40px var(--color_yellow),
-    -30px 30px 40px var(--color_cyan),
-    -80px  -20px 40px var(--color_magenta);
-
-}
-100% {
-    text-shadow: 
-    -5px -4px 3px var(--color_charGray),
-    15px -15px 20px var(--color_yellow),
-    15px 15px 20px var(--color_cyan),
-    -15px -15px 20px var(--color_magenta);
-    
-}   
+    display: inline-block; 
 }
 .animation__ping {
     animation: ping 1s alternate infinite;
@@ -609,6 +573,45 @@ Js camelCase, php snack_case, css B.E.M
         padding: 20px 5px;
      }
 }
+@media screen and (min-width: 651px) {
+    
+.animation__title--text-shadow {
+    animation: spotlight 2.5s ease-in-out   forwards running;
+}
+@keyframes spotlight {
+0% {
+    text-shadow: 
+    2px -2px 10px var(--color_charGray),
+    1px 3px 10px var(--color_yellow),
+    -3px 3px 10px var(--color_cyan),
+    5px -5px 10px var(--color_magenta); 
+}
+
+40% {
+    text-shadow: 
+    -6px -8px 10px var(--color_charGray),
+    20px -30px 30px var(--color_yellow),
+    30px 30px 30px var(--color_cyan),
+    -40px  30px 30px var(--color_magenta);
+}
+70% {
+    text-shadow: 
+    -4px -6px 8px var(--color_charGray),
+    -30px -30px 40px var(--color_yellow),
+    -30px 30px 40px var(--color_cyan),
+    -80px  -20px 40px var(--color_magenta);
+
+}
+100% {
+    text-shadow: 
+    -5px -4px 3px var(--color_charGray),
+    15px -15px 20px var(--color_yellow),
+    15px 15px 20px var(--color_cyan),
+    -15px -15px 20px var(--color_magenta);
+    
+}
+}  
+}
 @media screen and (max-width: 650px) {
     nav {
         position: relative;
@@ -636,5 +639,12 @@ Js camelCase, php snack_case, css B.E.M
     }
     .aboutMe ul li {
         grid-row: auto;
+    }
+    .animation__title--text-shadow {
+        text-shadow: 
+    -5px -4px 3px var(--color_charGray),
+    15px -15px 20px var(--color_yellow),
+    15px 15px 20px var(--color_cyan),
+    -15px -15px 20px var(--color_magenta);
     }
 }
