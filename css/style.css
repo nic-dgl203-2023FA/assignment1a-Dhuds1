@@ -426,9 +426,18 @@ footer {
     .contactList {
         display: flex;
         justify-content: center;
-    }
+}
+/* ANIMATION PAGE
+   MAIN GRID SECTION
+----------------------------------*/
+.grid__animation-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+}
 
-    
 /* ANIMATIONS Styles
 ----------------------------------*/
 /* Trying to learn to use B.E.M naming convention.
