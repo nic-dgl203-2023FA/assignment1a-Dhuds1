@@ -434,12 +434,16 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-content: center;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 
-    font-size: 2rem;
+    text-align: center;
 }
-
+.grid__animation-item {
+    width: 100%;
+    height: 50px;
+}
 .grid__animation-display button {
     font-family: inherit;
     font-weight: inherit;
@@ -468,7 +472,7 @@ footer {
 .animation__wrapper {
     display: flex;
     justify-content: center; 
-  }
+}
   
 .typing {
     color: white;
@@ -479,8 +483,34 @@ footer {
     animation: typing 3s forwards steps(13),
     blinking .5s steps(1) infinite;
 }
+.motion {
+    background-color: green;
+    position: relative;
+    cursor: pointer;
+}
+.motion .ball {
+    width: 50px;
 
-
+    position: absolute;
+    left: 0;
+}
+.motion:hover .ball {
+    animation: roll 3s infinite ease-in-out;
+}
+@keyframes roll {
+    0% {
+        left: 0%;
+        transform: rotate(0deg);
+    }
+    50% {
+        left: calc(100% - 50px);
+        transform: rotate(360deg);
+    }
+    100%{
+       left: 0%;
+       transform: rotate(0deg);
+    }
+}
 @keyframes blinking {
 0%, 100% {
     border-color: transparent;
@@ -494,7 +524,7 @@ footer {
         width: 0;
     }
     100% {
-        width: 100%;
+        width: 50%; /* I I added a container and it messed up the sizing, not the best way around it */
     }
 }
 
