@@ -438,6 +438,44 @@ footer {
     align-content: center;
 }
 
+.grid__animation-display button {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    border: 1px solid #AEA8d3;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background 300ms ease-in,
+                transform 200ms 100ms ease-in-out,
+                border-radius 200ms 300ms ease-in; /* honestly we did the same effect... I'll make a new one now...*/
+}
+.grid__animation-display h2 {
+    font-size: 5rem;
+    color: #dcf2b0;
+    text-shadow: 3px 3px 0px #59c3c3;
+    text-align: center;
+    
+    animation: scale-in 200ms 2s both;
+}
+.grid__animation-display button:hover {
+    transform: scale(1.2);
+    background-color: #AEA8d3;
+    color: #3d3d3d;
+
+    border-radius: 10px;
+}
+@keyframes scale-in {
+    0% {
+        transform: scale(0.2);
+    }
+    85% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 /* ANIMATIONS Styles
 ----------------------------------*/
 /* Trying to learn to use B.E.M naming convention.
