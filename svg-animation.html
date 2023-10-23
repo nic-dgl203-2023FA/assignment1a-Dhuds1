@@ -13,17 +13,11 @@
       <defs>
          <style>
             .cls-1 {
-               fill: none;
-               stroke: url(#linear-gradient-11);
-               stroke-miterlimit: 10;
-               stroke-width: 3px;
-            }
+               fill: #19043c;
+               font-family: Duckie, Duckie;
+               font-size: 260.72px;
+             }
          </style>
-         <lineargradient id="linear-gradient-11" x1="461" y1="500" x2="1461" y2="500"
-            gradienttransform="translate(461 1461) rotate(-90)" gradientunits="userSpaceOnUse">
-            <stop offset="0" stop-color="#19043c" />
-            <stop offset="1" stop-color="#e32c9b" />
-         </lineargradient>
          <lineargradient id="linear-gradient" x1="1194.13" y1="500" x2="1194.13" y2="0" gradientunits="userSpaceOnUse">
             <stop offset="0" stop-color="#f935b6" />
             <stop offset=".31" stop-color="#ad185a" />
@@ -303,34 +297,9 @@
             <rect id="Base" class="cls-56" y="501.09" width="100%" height="500" />
 
             <!-- GRID -->
-               <line class="cls-1" x1="1801.87" y1="1000" x2="1398.35" y2="0" />
-               <line class="cls-1" x1="1681.75" y1="1000" x2="1335.87" y2="0" />
-               <line class="cls-1" x1="1561.62" y1="1000" x2="1273.4" y2="0" />
-               <line class="cls-1" x1="1441.5" y1="1000" x2="1210.92" y2="0" />
-               <line class="cls-1" x1="1321.37" y1="1000" x2="1148.44" y2="0" />
-               <line class="cls-1" x1="1201.25" y1="1000" x2="1085.96" y2="0" />
-               <line class="cls-1" x1="1081.12" y1="1000" x2="1023.48" y2="0" />
-               <line class="cls-1" x1="961" y1="1000" x2="961" y2="0" />
-               <line class="cls-1" x1="840.87" y1="1000" x2="898.52" y2="0" />
-               <line class="cls-1" x1="720.75" y1="1000" x2="836.04" y2="0" />
-               <line class="cls-1" x1="600.62" y1="1000" x2="773.56" y2="0" />
-               <line class="cls-1" x1="480.5" y1="1000" x2="711.08" y2="0" />
-               <line class="cls-1" x1="360.37" y1="1000" x2="648.6" y2="0" />
-               <line class="cls-1" x1="240.25" y1="1000" x2="586.12" y2="0" />
-               <line class="cls-1" x1="120.13" y1="1000" x2="523.65" y2="0" />
-               <line class="cls-1" x1="438.37" y1="49.44" x2="1483.63" y2="49.44" />
-               <line class="cls-1" x1="413.39" y1="103.61" x2="1508.61" y2="103.61" />
-               <line class="cls-1" x1="385.9" y1="163.21" x2="1536.1" y2="163.21" />
-               <line class="cls-1" x1="355.51" y1="229.11" x2="1566.49" y2="229.12" />
-               <line class="cls-1" x1="321.72" y1="302.37" x2="1600.28" y2="302.37" />
-               <line class="cls-1" x1="283.94" y1="384.29" x2="1638.05" y2="384.29" />
-               <line class="cls-1" x1="241.42" y1="476.5" x2="1680.58" y2="476.5" />
-               <line class="cls-1" x1="193.2" y1="581.06" x2="1728.8" y2="581.06" />
-               <line class="cls-1" x1="138.05" y1="700.65" x2="1783.95" y2="700.65" />
-               <line class="cls-1" x1="74.37" y1="838.74" x2="1847.63" y2="838.74" />
             <!-- INLINE STYLE TO SEE WHAT I AM DOING -->
-
-
+            <style>
+            </style>
             <rect id="Horizon_Line" data-name="Horizon Line" y="496.76" width="100%" height="10"
                style="fill:#fbd5b3;stroke-width:0" />
             <ellipse id="Pink_Shine" data-name="Pink Shine" cx="1194.13" cy="499.32" rx="500" ry="20.03"
@@ -397,7 +366,27 @@
             opacity: .3;
          }
       }
-
+      #Dim_Spots {
+         --op-1: .2;
+         --op-2: .6;
+      }
+      #Bright_Spots {
+         --op-1: 1;
+         --op-2: .5;
+      }
+      #Dim_Spots,
+      #Bright_Spots {
+         mix-blend-mode: hard-light;
+         animation: dimming 2s infinite alternate;
+      }
+      @keyframes dimming {
+        0% {
+            opacity: var(--op-1);
+        } 
+        100% {
+            opacity: var(--op-2);
+        }
+      }
       #Last_Vertical_Shine,
       #Middle_Vertical_Shine,
       #First_Vertical_Shine {
