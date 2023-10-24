@@ -24,12 +24,24 @@
             </span>
           </a>
         </li>
-        <span>
-          <li><a href="animations.html">Animations</a></li>
-          <li><a href="svg-animation.html">SVG animation</a></li>
+        <input type="checkbox" id="navToggle" class="navToggle">
+        <label for="navToggle" class="navToggleLabel"><span></span></label>
+        <span class="mobileDrop">
+          <li><a href="motion.html">Motion</a></li>
+          <li><a href="animation.html">Animation</a></li>
         </span>
       </ul>
     </nav>
+    <!-- 
+      ANIMATED ELEMENTS:
+         -Dim Stars
+         -Bright Stars
+         -Red Glow
+         -Pink Glow
+         -Text
+         -Sun Glow
+
+     -->
    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 2336.27 1328.38">
       <defs>
          <lineargradient id="linear-gradient" x1="1194.13" y1="500" x2="1194.13" y2="0" gradientunits="userSpaceOnUse">
@@ -376,6 +388,7 @@
             transform: translate(calc(50% - 19rem), 350px);
          }
       }
+      /* PROOF OF CONCEPT, was seeing if it was animatable. Work in FIREFOX */
       @keyframes redGlow {
          0% {
             ry: 100px;
