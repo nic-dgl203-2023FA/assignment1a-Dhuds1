@@ -16,7 +16,7 @@
    <nav>
       <ul class="animation__link--border-bottom">
         <li>
-          <a class="logo" href="#">
+          <a class="logo" href="index.html">
             <span class="nav__list--logo">
               <h2 class="align-self--center margin--none" title="forever?">
                 Dawson Hudson
@@ -25,7 +25,6 @@
           </a>
         </li>
         <span>
-          <li><a href="index.html">Home</a></li>
           <li><a href="animations.html">Animations</a></li>
           <li><a href="svg-animation.html">SVG animation</a></li>
         </span>
@@ -319,19 +318,29 @@
          margin: 0;
       }
       body {
-         background-color: white;
+         background-color: #19043c;
          overflow-x: hidden;
-      }
-      .svg {
-         height: 100px;
-         background-color: white;
       }
       svg {
          position: absolute;
          left: 50%;
-         top: 25%;
-         transform: translate(-50%, -15%);
-         width: 200vw;
+         transform: translate(-50%);
+         width: 100vw;
+      }
+      @media screen and (max-width: 1400px) {
+         svg {
+            width: 150vw;
+         }
+      }
+      @media screen and (max-width: 1000px) {
+         svg {
+            width: 200vw;
+         }
+      }
+      @media screen and (max-width: 700px) {
+         svg {
+            width: 300vw;
+         }
       }
       .cls-56 {
                stroke-width: 0;
