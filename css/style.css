@@ -175,6 +175,7 @@ nav ul {
     padding: 0;
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     position: relative;
     left: 15%; 
@@ -183,7 +184,12 @@ nav ul li {
     list-style-type: none;
 }
 nav ul li, nav ul li a{
-    display: inline-block;
+    display: block;
+    text-align: center;
+}
+
+.mobileDrop li:not(:last-child) a {
+    border-bottom: 2px solid yellow;
 }
 nav ul li a {
     padding: 15px 20px;
@@ -210,28 +216,29 @@ nav ul li a, .nav__list--logo{
     white-space: nowrap;
 }
 /* STYLES FROM ASSIGNMENT 2 PROJECT 1 */
-
-
-
+/* USED CHAT GPT TO MAKE IT WORK WITH MY CODE */
+/* Initially hide the checkbox input */
 input#navToggle {
     display: none;
   }
-  
+  /* Style the label for the toggle button */
   input#navToggle~label {
-    position: relative;
-    padding: 0.25rem;
-    width: 2rem;
-    height: 1.25rem;
-    height: 2rem;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
   }
   
+  /* Styling for the lines of the toggle button */
   input#navToggle~label>span,
   input#navToggle~label>span::before,
   input#navToggle~label>span::after {
     content: "";
     display: block;
     position: absolute;
-    top: 0.75rem;
     height: 0.125rem;
     width: 1.75rem;
     opacity: 1;
@@ -239,14 +246,17 @@ input#navToggle {
     transition: 0.14s ease-in-out;
   }
   
+  /* Position the top line of the toggle button */
   input#navToggle~label>span::before {
     top: -0.5rem;
   }
   
+  /* Position the bottom line of the toggle button */
   input#navToggle~label>span::after {
     top: 0.5rem;
   }
   
+  /* When the checkbox is checked, hide the lines and rotate the button */
   #navToggle:checked~label>span {
     width: 0;
     background: rgba(18, 18, 18, 0);
@@ -262,10 +272,16 @@ input#navToggle {
     top: 0;
   }
   
-  #navToggle:checked~nav {
-    left: 0;
+  /* Initially hide the .mobileDrop element */
+  .mobileDrop {
+    display: none;
   }
-
+  
+  /* When the checkbox is checked, display the .mobileDrop element */
+  #navToggle:checked~.mobileDrop {
+    display: block;
+  }
+  
 /* END OF STYLES FROM ASSIGNMENT 2 PROJECT 1 */
 /* ABOUT Styles
 ----------------------------------*/
@@ -909,25 +925,11 @@ Js camelCase, php snack_case, css B.E.M
 }  
 }
 @media screen and (max-width: 650px) {
-    nav {
-        position: relative;
-    }
-    nav ul {
-        display: block;
-    }
-    nav ul li,
-    nav ul li a {
-        display: block;
-        text-align: center;
-    }
-    nav ul li a {
-        padding: 10px;
-    }
-    nav ul li a {
+    nav .mobileDrop {
         border-bottom: 1px solid pink;
     }
-    a.logo {
-       display: none;
+    .navToggleLabel {
+        display: none;
     }
     .aboutMe ul {
         grid-template-columns: repeat(4, 1fr);
