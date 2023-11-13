@@ -1,0 +1,13 @@
+footer {
+   background-color: $color-char-grey-900;
+   color: $color-white;
+   .contact__list {
+      list-style-type: none;
+      padding: 0;
+
+      a {
+         padding: 15px;
+         display: inline-block; 
+      }
+   }
+}

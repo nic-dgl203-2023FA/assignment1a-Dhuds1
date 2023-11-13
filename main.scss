@@ -2,6 +2,9 @@
 @import "./nav";
 @import "./about";
 @import "./projects";
+@import "./jobs";
+@import "./education";
+@import "./contact";
 *,
 *::before,
 *::after{
@@ -16,7 +19,7 @@ html {
    color-scheme: dark;
 }
 body {
-   background-color: $color-char-grey;
+   background-color: coral;
    margin: 0;
    padding: 0;
 

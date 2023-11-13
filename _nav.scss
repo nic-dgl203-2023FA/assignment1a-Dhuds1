@@ -1,6 +1,6 @@
 .nav {
-   background-color: $color-char-grey;
-   border-bottom: 1px solid magenta;
+   background-color: $color-char-grey-900;
+   border-bottom: 1px solid $color-magenta;
    position: sticky;
    top: 0px;
    z-index: 1000;
@@ -33,8 +33,8 @@
                   transition: all 300ms linear;
                   :hover {
                      transition: color 200ms linear;
-                     color: black;
-                     -webkit-text-stroke: 1px white;
+                     color: $color-black;
+                     -webkit-text-stroke: 1px $color-white;
                   }
                }
             }
@@ -62,7 +62,7 @@
             height: 0.125rem;
             width: 1.75rem;
             opacity: 1;
-            background: #fff;
+            background: $color-white;
             transition: 0.14s ease-in-out;
             
             &::before,
@@ -72,17 +72,17 @@
                position: absolute;
                width: 100%;
                height: .125rem;
-               background-color: white;
+               background-color: $color-white;
                transition: 0.14s ease-in-out;
             }
             &::before {
                top: -0.5rem;
-               background-color: #fff;
+               background-color: $color-white;
              }
            
              &::after {
                top: 0.5rem;
-               background-color: #fff;
+               background-color: $color-white;
              }
          }
       }
@@ -91,12 +91,12 @@
             background: rgba(18, 18, 18, 0);
             &::before {
                transform: rotateZ(45deg);
-               background-color: #fff;
+               background-color: $color-white;
                top: 0;
             }
             &::after {
                transform: rotateZ(-45deg);
-               background-color: #fff;
+               background-color: $color-white;
                top: 0;
             }
          }
@@ -111,7 +111,7 @@
          font-size: 30px;
          height: 100%;
          margin-top: 10px;
-         white-space: nowrap;
+         $color-white-space: nowrap;
       }
    }
    .mobile__drop {

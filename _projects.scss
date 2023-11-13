@@ -1,20 +1,20 @@
 .projects {
-   background-color: $color-char-grey;
+   background-color: $color-char-grey-900;
    padding-block: 20px;
    position: relative;
    a{
-      color: $color-char-grey;
+      color: $color-char-grey-900;
    }
    .btn{
-      background-color: white;
+      background-color: $color-white;
       padding: 8px;
       text-decoration: none;
       display: inline-block;
-      border: 1px solid $color-char-grey;
+      border: 1px solid $color-char-grey-900;
    }
    &__item {
-      color: $color-char-grey;
-      background-color: #b2b2ff;
+      color: $color-char-grey-900;
+      background-color: $color-blue-500;
       overflow: hidden;
       margin-bottom: 50px;
       position: relative;
