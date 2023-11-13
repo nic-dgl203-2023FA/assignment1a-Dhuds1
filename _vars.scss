@@ -2,4 +2,5 @@ $color-yellow: rgba(255, 255, 0, .8);
 $color-magenta: rgba(255, 0, 255, .8);
 $color-cyan: rgba(0, 255, 255, .8);
 $color-char-grey: #0e1111;
+$color-char-grey-500: lighten($color-char-grey, 25%);
 

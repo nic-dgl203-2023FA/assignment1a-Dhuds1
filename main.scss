@@ -1,5 +1,7 @@
 @import "./vars";
 @import "./nav";
+@import "./about";
+@import "./projects";
 *,
 *::before,
 *::after{
@@ -22,6 +24,21 @@ body {
    
    font-size: 15px;
    line-height: 1.5;
+}
+.heroBlock {
+   height: 600px;
+}
+.backgroundWall {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   z-index: -10;
+   background: url(../images/texture.jpg),  white;
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: 50% 50%;
+   filter: brightness(.5);
 }
 header{
    height: 600px;
