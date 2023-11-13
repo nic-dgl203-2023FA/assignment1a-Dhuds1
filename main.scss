@@ -1,0 +1,29 @@
+@import "./vars";
+@import "./nav";
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html {
+   font-size: 62.5%;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+   color-scheme: dark;
+}
+header{
+   height: 600px;
+   width: 100%;
+   color: white;
+   
+   position: fixed;
+   z-index: -3;
+}
+.content-wrap
+// contentWrapAnimation
+{
+   max-width: 800px;
+   width: 85%;
+   margin: 0 auto;
+   padding: 60px 0;
+}

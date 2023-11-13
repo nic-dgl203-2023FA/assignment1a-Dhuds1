@@ -1,0 +1,104 @@
+.nav {
+   background-color: $color-char-grey;
+   border-bottom: 1px solid magenta;
+   position: sticky;
+   top: 0px;
+   z-index: 1000;
+
+   ul {
+      width: 70%;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      left: 15%; 
+
+      li {
+         list-style-type: none;
+         a{
+            font-size: 1.7rem;
+            display: block;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: capitalize;
+            position: relative;
+         }
+         a:not(:last-child) {
+            margin-inline: 10px;
+         }
+      }
+      
+   }
+   &__toggle{
+      display: none;
+
+      &~label {
+         position: absolute;
+         right: 0;
+         top: 10px;
+         padding: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         z-index: 999;
+
+         &>span,
+         &>span::before,
+         &>span::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 0.125rem;
+            width: 1.75rem;
+            opacity: 1;
+            background: #fff;
+            transition: 0.14s ease-in-out;
+         }
+         &>span{
+            &::before {
+               top: -0.5rem;
+            }
+            &::after b{
+               top: 0.5rem;
+            }
+         }
+      }
+      &:checked{
+         &~label>span {
+            width: 0;
+            background: rgba(18, 18, 18, 0);
+   
+            &::before {
+               transform: rotateZ(45deg);
+               top: 0;
+            }
+            &::after {
+               transform: rotateZ(-45deg);
+               top: 0;
+            }
+         }
+         &~.mobile_drop {
+            display: block;
+         }
+      }
+   }
+   &__list--logo {
+      height: 100%;
+      h2 {
+         font-size: 30px;
+         height: 100%;
+         margin-top: 10px;
+         white-space: nowrap;
+      }
+   }
+   .mobile__drop {
+      display: none;
+      li:not(:last-child) a {
+         border-bottom: 2px solid $color-yellow;
+      }
+   }
+}

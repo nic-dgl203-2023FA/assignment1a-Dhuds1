@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <main>
@@ -16,7 +16,7 @@
         <div class="backgroundWall">
         </div>
         <header class="flex-center-center">
-          <div class=" contentWrap padding-bottom--none">
+          <div class=" content-wrap padding-bottom--none">
             <span>
               <h1 class="animation__title--text-shadow outline--text-stroke-bold">Dawson Hudson</h1>
               <h2 class="animation__title--text-shadow outline--text-stroke-light margin--none">Live Laugh Coffee</h2>
@@ -24,7 +24,7 @@
           </div>
         </header>
       </div>
-      <nav>
+      <nav class="nav">
         <ul class="animation__link--border-bottom">
           <li>
             <a class="logo" href="index.html">
@@ -35,9 +35,9 @@
               </span>
             </a>
           </li>
-          <input type="checkbox" id="navToggle" class="navToggle">
-          <label for="navToggle" class="navToggleLabel"><span></span></label>
-          <span class="mobileDrop">
+          <input type="checkbox" id="nav__toggle" class="nav__toggle">
+          <label for="nav__toggle" class="nav__toggle--labels"><span></span></label>
+          <span class="mobile__drop">
             <li><a href="index.html">Home</a></li>
             <li><a href="motion.html">Motion</a></li>
             <li><a href="animation.html">Animation</a></li>
@@ -45,8 +45,8 @@
         </ul>
       </nav>
        <!-- ***********************  ABOUT / PROFILE  *********************** -->
-        <section id="about" class="aboutMe">
-          <div class="contentWrap">
+        <section id="about" class="about">
+          <div class="content-wrapper">
             <h2>About Me</h2>
             <div>
               <p>
@@ -72,32 +72,32 @@
         </section>
         <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
         <section id="projects" class= "projects">
-          <div class="contentWrap divider">
+          <div class="content-wrap divider">
 
             <h2>Featured Projects</h2>
             <!-- Copy the whole <section> block to add more projects. -->
-              <section class="projectItem animation__pop-out-yellow animation__slice-corners">
+              <section class="projects__item animation__pop-out-yellow animation__slice-corners">
                 <img class="" src="images/dgl103-finalProject.jpg" alt="A very blue image of a deep blue sky and a blue dandelion, the last one of the season.">
                 <h3>DGL 103 - Final Project</h3>
                 <p>I did a website re-design for Jim's Clothes Closet for DGL-103.</p>
                 <a class="btn animation__pop-out-dark" href="https://github.com/Dhuds1/final-project-103" target="_blank">View project</a>
               </section>
 
-              <section class="projectItem animation__pop-out-yellow animation__slice-corners">
+              <section class="projects__item animation__pop-out-yellow animation__slice-corners">
                 <img class="" src="images/spain-finalProject.jpg" alt="A very blue image of a deep blue sky and a blue dandelion, the last one of the season.">
                 <h3>Spain Field in School - Final Project</h3>
                 <p>I created a website highlighting some of the history I learned when I travelled in spain.</p>
                 <a class="btn animation__pop-out-dark" href="https://spain.alamort.space" target="_blank">View project</a>
               </section>
 
-              <section class="projectItem animation__pop-out-yellow animation__slice-corners">
+              <section class="projects__item animation__pop-out-yellow animation__slice-corners">
                 <img class="" src="images/dgl111-socialCard.jpg" alt="A very blue image of a deep blue sky and a blue dandelion, the last one of the season.">
                 <h3>DGL 111 - Social Cards</h3>
                 <p>I created a user interace, following a tutorial and made my own changes, for a social media app in a card style.</p>
                 <a class="btn animation__pop-out-dark" href="https://xd.adobe.com/view/57f95b2a-22a1-4051-a088-ef5c499b5083-02aa/" target="_blank">View project</a>
               </section>
 
-              <section class="projectItem animation__pop-out-yellow animation__slice-corners">
+              <section class="projects__item animation__pop-out-yellow animation__slice-corners">
                 <img class="" src="images/dgl111-wireframes.jpg" alt="A very blue image of a deep blue sky and a blue dandelion, the last one of the season.">
                 <h3>DGL 111 - Landing Page</h3>
                 <p>I created a landing page using everything I learned from DGL-111.</p>
@@ -110,43 +110,43 @@
         </section>
           
           <!-- ***********************  WORK EXPERIENCE  *********************** -->
-          <section id="experience" class="workExperience">
-            <div class="contentWrap itemDetails divider section__titles">
+          <section id="experience" class="job">
+            <div class="content-wrapper item--detail divider section__titles">
               <h2>Work Experience</h2>              
               <!-- Copy this whole <section> block to add more jobs. -->
-              <section class="jobItem">
-                <div class="jobItem--timeline">
+              <section class="job__item">
+                <div class="job__item--timeline">
                   <div class="job__bullet-point">
                   </div>
                     <div class="list--style-ping"></div>
                 </div>
-                <div class="jobDetail">
+                <div class="job__detail">
                   <h3>Quality Foods</h3>
                   <h4>Grocery Clerk</h4>
                   <p>2015 - 2018</p>
                 </div>
               </section>
 
-              <section class="jobItem">
-                <div class="jobItem--timeline">
+              <section class="job__item">
+                <div class="job__item--timeline">
                   <div class="job__bullet-point">
                   </div>
                     <div class="list--style-ping"></div>
                 </div>
-                <div class="jobDetail">
+                <div class="job__detail">
                   <h3>Tuff Marine Products</h3>
                   <h4>Pile Driver</h4>
                   <p>2018 - 2019</p>
                 </div>
               </section>
 
-              <section class="jobItem">
-                <div class="jobItem--timeline">
+              <section class="job__item">
+                <div class="job__item--timeline">
                   <div class="job__bullet-point-end">
                   </div>
                     <div class="list--style-ping animation__ping"></div>
                 </div>
-                <div class="jobDetail timeline--last-item">
+                <div class="job__detail timeline--last-item">
                   <h3>Quality Foods</h3>
                   <h4>Key Holder</h4>
                   <p>2019 - Current</p>
@@ -158,12 +158,12 @@
             
             <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
             <section id="education" class="education">
-              <div class="contentWrap itemDetails">
+              <div class="content-wrap itemDetails">
 
                 <h2 class="title__dark">Education</h2>
                 
                 <!-- Copy this whole <section> block to add more schools. -->
-                  <section class="educationItem section__titles section__paragraph">
+                  <section class="education__item section__titles section__paragraph">
                     <h3>Courtenay </h3>
                     <h4>North Island College</h4>
                     <p>2023 - current</p>
@@ -176,7 +176,7 @@
                 
                 <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
                 <footer id="contact">
-                  <div class="contentWrap">
+                  <div class="content-wrap">
 
                     <h2>Let's Keep in Touch!</h2>
                     
