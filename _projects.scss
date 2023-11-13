@@ -28,4 +28,26 @@
          margin-top: 0;
       }
    }
+   @include responsiveMax(500px){
+      &__item {
+         img {
+            width: 300px;
+            height: 200px;
+         }
+         p {
+            width: 30ch;
+         }
+      }
+      h2 {
+         margin-bottom: 40px;
+      }
+   }
+   @include responsiveMin(750px){
+      &__item {
+         img {
+            margin-right: 20px;
+            float: left;
+         }
+      }
+   }
 }

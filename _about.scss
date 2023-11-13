@@ -56,4 +56,16 @@
       }
 
    }
+   @include responsiveMax(650px){
+      & {
+         ul {
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 20px;
+
+            li {
+               grid-row: auto;
+            }
+         }
+      }
+   }
 }

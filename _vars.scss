@@ -9,3 +9,14 @@ $color-blue-500: #b2b2ff;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-pink: pink;
+
+@mixin responsiveMin($breakpoint) {
+   @media only screen and (min-width: $breakpoint) {
+     @content;
+   }
+ }
+ @mixin responsiveMax($breakpoint) {
+   @media only screen and (max-width: $breakpoint) {
+     @content;
+   }
+ }

@@ -10,4 +10,10 @@ footer {
          display: inline-block; 
       }
    }
+   @include responsiveMin(750px){
+      .contact__list {
+         display: flex;
+         justify-content: center;
+      }
+   }
 }

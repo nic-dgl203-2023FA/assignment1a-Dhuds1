@@ -1,0 +1,86 @@
+@include responsiveMin(750px){
+   .animation {
+      &__color-split {
+         transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+         :hover {
+            box-shadow: 4px 4px var(--color_cyan),
+            -4px -4px var(--color_magenta);
+            transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+         }
+      }
+      &__pop-out {
+         &-yellow {
+            box-shadow: 0 0 0 0 $color-yellow;
+            transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
+
+            :hover {
+               box-shadow: 10px 10px 0 0 $color-yellow;
+               transform: translate(-10px, -10px);
+               transition: all 300ms ease-in-out;
+            }
+         }
+         &-dark {
+            box-shadow: 0 0 0 0 $color-char-grey-900;
+            transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
+
+            :hover {
+               box-shadow: 3px 3px 0 0 $color-char-grey-900;
+               transform: translate(-3px, -3px);
+               transition: all 300ms ease-in-out;
+            }
+         }
+      }
+      &__slice-corners {
+         img {
+            border: 2px solid var(--color_charGray);
+            clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+            transition: clip-path 300ms ease-in-out;
+         }
+         :hover img {
+            -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
+            clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
+            border: 2px solid var(--color_charGray);
+            transition: clip-path 300ms ease-in-out;
+         }
+      }
+      &__link--border-bottom {
+         li {
+           a {
+             &:not(.logo) {
+               &::before {
+                 content: " ";
+                 width: 80%;
+                 height: 3px;
+                 position: absolute;
+                 bottom: 2px;
+                 left: 10%;
+                 background-color: $color-yellow;
+                 transition: all 300ms ease-in-out;
+               }
+               &:hover::before {
+                 width: 60%;
+                 height: 2px;
+                 position: absolute;
+                 bottom: 15%;
+                 left: 20%;
+                 background-color: rgba(255, 0, 255, 0.8);
+               }
+             }
+             &:hover {
+               color: $color-cyan;
+             }
+             &:active {
+               color: $color-magenta;
+             }
+           }
+           transition: all 200ms ease-out
+         }
+       }
+       
+   }
+}
+@include responsiveMax(850px){
+   .grid__animation-display {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}

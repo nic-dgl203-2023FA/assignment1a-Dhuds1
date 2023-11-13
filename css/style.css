@@ -245,119 +245,6 @@
 
 /* RESPONSIVE Styles
 ----------------------------------*/
-@media screen and (min-width:750px){
-    a.logo {
-        padding: 0;
-    }
-    .projectItem img{
-        margin-right: 20px;
-        float: left;
-    }
-    .contactList {
-        display: flex;
-        justify-content: center;
-    }
-    nav ul {
-        flex-direction: row;
-    }
-    nav ul input {
-        display: hidden!important;
-    }
-    nav ul li, nav ul li a{
-        display: inline-block;
-    }
-    input#navToggle~label>span,
-    input#navToggle~label>span::before,
-    input#navToggle~label>span::after {
-        display: none;
-    }
-    .mobileDrop {
-        display: block;
-      }
-      .mobileDrop li:not(:last-child) a {
-        border-bottom: none;
-    }
-    
-/* ANIMATIONS Styles
-----------------------------------*/
-/* Trying to learn to use B.E.M naming convention.
-I like the idea of using a different for each css, js and php, idk if thats good practice.  
-Js camelCase, php snack_case, css B.E.M
-*/
-.animation__color-split {
-    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
-}
-.animation__color-split:hover {
-    box-shadow: 4px 4px var(--color_cyan),
-                -4px -4px var(--color_magenta);
-    transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
-}
-/* inspiration from GUMROAD for the transition effect, not perfect https://gumroad.com/*/
-.animation__pop-out-yellow,
-.animation__pop-out-dark {
-    transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
-}
-.animation__pop-out-yellow {
-    box-shadow: 0 0 0 0 var(--color_yellow);
-}
-.animation__pop-out-dark {
-    box-shadow: 0 0 0 0 var(--color_charGray)
-}
-.animation__pop-out-yellow:hover {
-    box-shadow: 10px 10px 0 0 var(--color_yellow);
-    transform: translate(-10px, -10px);
-    transition: all 300ms ease-in-out;
-}
-.animation__pop-out-dark:hover {
-    box-shadow: 3px 3px 0 0 var(--color_charGray);
-    transform: translate(-3px, -3px);
-    transition: all 300ms ease-in-out;
-}
-.animation__slice-corners img{
-    border: 2px solid var(--color_charGray);
-    clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
-    transition: clip-path 300ms ease-in-out;
-}
-.animation__slice-corners:hover img{
-    -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
-    clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
-    border: 2px solid var(--color_charGray);
-        transition: clip-path 300ms ease-in-out;
-}
-.animation__link--border-bottom li a:not(.logo)::before{
-    content: " ";
-    width: 80%;
-    height: 3px;
-    position: absolute;
-    bottom: 2px;
-    left: 10%;
-    background-color: var(--color_yellow);
-    transition: all 300ms ease-in-out;
-}
-.animation__link--border-bottom li a:not(.logo):hover::before {
-    width: 60%;
-    height: 2px;
-    position: absolute;
-    bottom: 15%;
-    left: 20%;
-    background-color:  rgba(255, 0, 255, .8);
-}
-.animation__link--border-bottom li a:hover {
-    color: var(--color_cyan);
-}
-.animation__link--border-bottom li a:active {
-    color: var(--color_magenta);
-}
-.animation__link--border-bottom li a::before,
-.animation__link--border-bottom li a {
-    transition: all 200ms ease-out;
-}
-}
-@media screen and (max-width: 850px) {
-    .grid__animation-display {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 @media screen and (max-width: 575px) {
     .grid__animation-display {
         grid-template-columns: repeat(1, 1fr);
@@ -405,33 +292,6 @@ Js camelCase, php snack_case, css B.E.M
         border: 2px solid var(--color_charGray);
 }
 }
-@media screen and (max-width: 500px) {
-    .projectItem img {
-        width: 300px;
-        height: 200px;
-    }
-    .projectItem p {
-        width: 30ch;
-    }
-    h2 {
-        margin-bottom: 40px;
-    }
-}
-@media screen and (max-width: 1050px) {
-    nav ul{
-       width: 80%;
-       left: 10%;
-    }
-}
-@media screen and (max-width: 950px) {
-    nav ul{
-        width: 90%;
-        left: 5%;
-     }
-     nav ul li a {
-        padding: 20px 5px;
-     }
-}
 @media screen and (min-width: 651px) {
     
 .animation__title--text-shadow {
@@ -472,16 +332,6 @@ Js camelCase, php snack_case, css B.E.M
 }  
 }
 @media screen and (max-width: 650px) {
-    nav .mobileDrop {
-        border-bottom: 1px solid pink;
-    }
-    .aboutMe ul {
-        grid-template-columns: repeat(4, 1fr);
-        row-gap: 20px;
-    }
-    .aboutMe ul li {
-        grid-row: auto;
-    }
     .animation__title--text-shadow {
         text-shadow: 
     -5px -4px 3px var(--color_charGray),

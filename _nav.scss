@@ -120,4 +120,58 @@
          border-bottom: 2px solid $color-yellow;
       }
    }
+   @include responsiveMax(650px){
+      & {
+         .mobile__drop {
+            border-bottom: 1px solid pink;
+         }
+      }
+   }
+   @include responsiveMax(950px){
+      & {
+         ul {
+            width: 90%;
+            left: 5%;
+            
+            li a {
+               padding: 20px 5px;
+            }
+         }
+      }
+   }
+   @include responsiveMax(1050px){
+      & {
+         ul {
+            width: 80%;
+            left: 10%;
+         }
+      }
+   }
+   @include responsiveMin(750px){
+      & {
+         ul {
+            flex-direction: row;
+            a.logo {
+               padding: 0;
+            }
+            input {
+               display: hidden!important;
+            }
+            li {
+               display: inline-block;
+            }
+         }
+         .mobile__drop {
+            display: block;
+            li:not(:last-child)a {
+               border-bottom: none;
+           }
+         }
+      }
+      &__toggle {
+         ~label>span {
+            display: none;
+         }
+      }
+   }
 }
