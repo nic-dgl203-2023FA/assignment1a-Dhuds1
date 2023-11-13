@@ -321,7 +321,7 @@ body {
   position: absolute;
   top: 0;
   z-index: -10;
-  background: url(../images/texture.jpg), white;
+  background: url(../images/texture.jpg), #ffffff;
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
@@ -331,7 +331,7 @@ body {
 header {
   height: 600px;
   width: 100%;
-  color: white;
+  color: #ffffff;
   position: fixed;
   z-index: -3;
 }
@@ -357,13 +357,13 @@ h1 {
 }
 
 h2 {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 45px;
   letter-spacing: -1px;
-  text-shadow: -2px 2px 0px var(--color_charGray), -1px -3px 3px var(--color_yellow), 3px 3px 3px var(--color_cyan), -5px -5px 3px var(--color_magenta);
+  text-shadow: -2px 2px 0px #0e1111, -1px -3px 3px rgba(255, 255, 0, 0.8), 3px 3px 3px rgba(0, 255, 255, 0.8), -5px -5px 3px rgba(255, 0, 255, 0.8);
   margin: 0;
   margin-bottom: 20px;
-  -webkit-text-stroke: 1px var(--color_charGray);
+  -webkit-text-stroke: 1px #0e1111;
 }
 
 h1, h2 {
@@ -388,5 +388,5 @@ h3 {
 .divider > section {
   position: relative;
   padding: 25px 25px;
-  border: 2px solid var(--color_charGray);
+  border: 2px solid #0e1111;
 }/*# sourceMappingURL=main.css.map */
