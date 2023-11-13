@@ -16,4 +16,11 @@ footer {
          justify-content: center;
       }
    }
+   @include responsiveMax(749px){
+      .contact__list{
+         a{
+            padding: 5px;
+         } 
+     }
+   }
 }

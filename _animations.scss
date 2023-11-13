@@ -1,86 +1,194 @@
-@include responsiveMin(750px){
-   .animation {
-      &__color-split {
-         transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
-         :hover {
-            box-shadow: 4px 4px var(--color_cyan),
-            -4px -4px var(--color_magenta);
-            transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
-         }
+.animation {
+   &__ping {
+      animation: ping 1s alternate infinite;
+   }
+   @keyframes ping {
+      0% {
       }
+      100% {
+          box-shadow: 
+          0px 0px 0px 6px rgba(255, 0, 255, .5),
+          0px 0px 0px 12px rgba(0, 255, 255, .5),
+          0px 0px 0px 18px rgba(255, 255, 0, .5);
+      }
+   }
+}
+
+@include responsiveMin(750px) {
+   .animation {
+     &__color-split {
+       transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+ 
+       :hover {
+         box-shadow: 4px 4px $color-cyan,
+           -4px -4px $color-magenta;
+         transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+       }
+     }
+ 
+     &__pop-out {
+       &-yellow {
+         box-shadow: 0 0 0 0 $color-yellow;
+         transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
+ 
+         :hover {
+           box-shadow: 10px 10px 0 0 $color-yellow;
+           transform: translate(-10px, -10px);
+           transition: all 300ms ease-in-out;
+         }
+       }
+ 
+       &-dark {
+         box-shadow: 0 0 0 0 $color-char-grey-900;
+         transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
+ 
+         :hover {
+           box-shadow: 3px 3px 0 0 $color-char-grey-900;
+           transform: translate(-3px, -3px);
+           transition: all 300ms ease-in-out;
+         }
+       }
+     }
+ 
+     &__slice-corners {
+       img {
+         border: 2px solid $color-char-grey-900;
+         clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+         transition: clip-path 300ms ease-in-out;
+       }
+ 
+       :hover img {
+         -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
+         clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
+         border: 2px solid $color-char-grey-900;
+         transition: clip-path 300ms ease-in-out;
+       }
+     }
+ 
+     &__link--border-bottom {
+       li {
+         a {
+           &:not(.logo) {
+             &::before {
+               content: " ";
+               width: 80%;
+               height: 3px;
+               position: absolute;
+               bottom: 2px;
+               left: 10%;
+               background-color: $color-yellow;
+               transition: all 300ms ease-in-out;
+             }
+ 
+             &:hover::before {
+               width: 60%;
+               height: 2px;
+               position: absolute;
+               bottom: 15%;
+               left: 20%;
+               background-color: $color-magenta;
+             }
+           }
+ 
+           &:hover {
+             color: $color-cyan;
+           }
+ 
+           &:active {
+             color: $color-magenta;
+           }
+         }
+ 
+         transition: all 200ms ease-out;
+       }
+     }
+   }
+ }
+ 
+
+@include responsiveMax(650px){
+   .animation{
+      &__title--text-shadow {
+         text-shadow:
+            -5px -4px 3px $color-char-grey-900,
+            15px -15px 20px $color-yellow,
+            15px 15px 20px $color-cyan,
+            -15px -15px 20px $color-magenta;
+      }
+   }
+}
+
+@include responsiveMin(651px) {
+   .animation__title--text-shadow {
+      animation: spotlight 2.5s ease-in-out forwards running;
+   }
+   @keyframes spotlight {
+      0% {
+         text-shadow:
+            2px -2px 10px $color-char-grey-900,
+            1px 3px 10px $color-yellow,
+            -3px 3px 10px $color-cyan,
+            5px -5px 10px $color-magenta;
+      }
+
+      40% {
+         text-shadow:
+            -6px -8px 10px $color-char-grey-900,
+            20px -30px 30px $color-yellow,
+            30px 30px 30px $color-cyan,
+            -40px 30px 30px $color-magenta;
+      }
+
+      70% {
+         text-shadow:
+            -4px -6px 8px $color-char-grey-900,
+            -30px -30px 40px $color-yellow,
+            -30px 30px 40px $color-cyan,
+            -80px -20px 40px $color-magenta;
+
+      }
+
+      100% {
+         text-shadow:
+            -5px -4px 3px $color-char-grey-900,
+            15px -15px 20px $color-yellow,
+            15px 15px 20px $color-cyan,
+            -15px -15px 20px $color-magenta;
+
+      }
+   }
+}
+
+@include responsiveMax(850px) {
+   .grid__animation-display {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+@include responsiveMax(749px){
+   .animation{
       &__pop-out {
          &-yellow {
-            box-shadow: 0 0 0 0 $color-yellow;
-            transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
-
-            :hover {
-               box-shadow: 10px 10px 0 0 $color-yellow;
-               transform: translate(-10px, -10px);
-               transition: all 300ms ease-in-out;
-            }
+            box-shadow: 10px 10px 0 0 $color-yellow;
+            transform: translate(-5px, -5px);
          }
          &-dark {
-            box-shadow: 0 0 0 0 $color-char-grey-900;
-            transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
-
-            :hover {
-               box-shadow: 3px 3px 0 0 $color-char-grey-900;
-               transform: translate(-3px, -3px);
-               transition: all 300ms ease-in-out;
-            }
+            box-shadow: 3px 3px 0 0 $color-char-grey-900;
+            transform: translate(-3px, -3px);
          }
       }
       &__slice-corners {
          img {
-            border: 2px solid var(--color_charGray);
-            clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
-            transition: clip-path 300ms ease-in-out;
-         }
-         :hover img {
             -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
             clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
-            border: 2px solid var(--color_charGray);
-            transition: clip-path 300ms ease-in-out;
+            border: 2px solid $color-char-grey-900;
          }
       }
-      &__link--border-bottom {
-         li {
-           a {
-             &:not(.logo) {
-               &::before {
-                 content: " ";
-                 width: 80%;
-                 height: 3px;
-                 position: absolute;
-                 bottom: 2px;
-                 left: 10%;
-                 background-color: $color-yellow;
-                 transition: all 300ms ease-in-out;
-               }
-               &:hover::before {
-                 width: 60%;
-                 height: 2px;
-                 position: absolute;
-                 bottom: 15%;
-                 left: 20%;
-                 background-color: rgba(255, 0, 255, 0.8);
-               }
-             }
-             &:hover {
-               color: $color-cyan;
-             }
-             &:active {
-               color: $color-magenta;
-             }
-           }
-           transition: all 200ms ease-out
-         }
-       }
-       
-   }
-}
-@include responsiveMax(850px){
-   .grid__animation-display {
-      grid-template-columns: repeat(2, 1fr);
+      
   }
+}
+@include responsiveMax(575px) {
+   .grid__animation-display {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+   }
 }

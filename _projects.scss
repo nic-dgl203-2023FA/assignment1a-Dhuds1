@@ -28,6 +28,24 @@
          margin-top: 0;
       }
    }
+   @include responsiveMax(749px){
+      &__item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         img {
+            width: 400px;
+            height: 266px; 
+         }
+         p {
+            width: 45ch;
+         }
+         h3 {
+            margin-top: 10px;
+         }
+      }
+   }
    @include responsiveMax(500px){
       &__item {
          img {
