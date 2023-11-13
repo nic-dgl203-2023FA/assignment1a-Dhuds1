@@ -43,7 +43,7 @@
   align-items: center;
   z-index: 999;
 }
-.nav__toggle ~ label > span, .nav__toggle ~ label > span::before, .nav__toggle ~ label > span::after {
+.nav__toggle ~ label > span {
   content: "";
   display: block;
   position: absolute;
@@ -53,25 +53,37 @@
   background: #fff;
   transition: 0.14s ease-in-out;
 }
+.nav__toggle ~ label > span::before, .nav__toggle ~ label > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background-color: white;
+  transition: 0.14s ease-in-out;
+}
 .nav__toggle ~ label > span::before {
   top: -0.5rem;
+  background-color: #fff;
 }
-.nav__toggle ~ label > span::after b {
+.nav__toggle ~ label > span::after {
   top: 0.5rem;
+  background-color: #fff;
 }
 .nav__toggle:checked ~ label > span {
-  width: 0;
   background: rgba(18, 18, 18, 0);
 }
 .nav__toggle:checked ~ label > span::before {
   transform: rotateZ(45deg);
+  background-color: #fff;
   top: 0;
 }
 .nav__toggle:checked ~ label > span::after {
   transform: rotateZ(-45deg);
+  background-color: #fff;
   top: 0;
 }
-.nav__toggle:checked ~ .mobile_drop {
+.nav__toggle:checked ~ .mobile__drop {
   display: block;
 }
 .nav__list--logo {
@@ -93,6 +105,8 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
