@@ -26,9 +26,18 @@
             text-decoration: none;
             text-transform: capitalize;
             position: relative;
-         }
-         a:not(:last-child) {
-            margin-inline: 10px;
+
+            .logo {
+               padding: 10px 0;
+               h2 {
+                  transition: all 300ms linear;
+                  :hover {
+                     transition: color 200ms linear;
+                     color: black;
+                     -webkit-text-stroke: 1px white;
+                  }
+               }
+            }
          }
       }
       
@@ -46,7 +55,7 @@
          align-items: center;
          z-index: 999;
 
-         &>span {
+         span {
             content: "";
             display: block;
             position: absolute;
@@ -78,7 +87,7 @@
          }
       }
       &:checked {
-         &~label>span {
+         ~label>span {
             background: rgba(18, 18, 18, 0);
             &::before {
                transform: rotateZ(45deg);
@@ -91,7 +100,7 @@
                top: 0;
             }
          }
-         &~.mobile__drop {
+         ~.mobile__drop {
             display: block;
          }
       }
