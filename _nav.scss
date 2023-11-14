@@ -2,7 +2,8 @@
    background-color: $color-char-grey-900;
    border-bottom: 1px solid $color-magenta;
    position: sticky;
-   top: 0px;
+   // wouldn't sit flush to the top; too lazy to figure it out
+   top: -2px;
    z-index: 1000;
 
    ul {
@@ -26,21 +27,19 @@
             text-decoration: none;
             text-transform: capitalize;
             position: relative;
-
-            .logo {
-               padding: 10px 0;
-               h2 {
-                  transition: all 300ms linear;
-                  :hover {
-                     transition: color 200ms linear;
-                     color: $color-black;
-                     -webkit-text-stroke: 1px $color-white;
-                  }
-               }
-            }
          }
       }
-      
+      .logo {
+         padding: 10px 0;
+         h2 {
+            @include transition(all, 300, linear);
+            &:hover {
+               @include transition(color, 300, linear);
+               color: $color-black;
+               -webkit-text-stroke: 1px $color-white;
+            }
+         }
+      }      
    }
    &__toggle{
       display: none;
@@ -48,32 +47,22 @@
       &~label {
          position: absolute;
          right: 0;
-         top: 10px;
+         top: 20px;
          padding: 20px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
          z-index: 999;
+         @include flex__center-center();
 
          span {
-            content: "";
-            display: block;
-            position: absolute;
-            height: 0.125rem;
-            width: 1.75rem;
             opacity: 1;
             background: $color-white;
-            transition: 0.14s ease-in-out;
+            @include transition(all, 0.14);
+            @include before-after(1.75rem, 0.125rem);
             
             &::before,
             &::after {
-               content: "";
-               display: block;
-               position: absolute;
-               width: 100%;
-               height: .125rem;
                background-color: $color-white;
-               transition: 0.14s ease-in-out;
+               @include transition(all, 0.14);
+               @include before-after(100%, 0.125rem);
             }
             &::before {
                top: -0.5rem;
@@ -90,14 +79,14 @@
          ~label>span {
             background: rgba(18, 18, 18, 0);
             &::before {
-               transform: rotateZ(45deg);
                background-color: $color-white;
                top: 0;
+               transform: rotateZ(45deg);
             }
             &::after {
-               transform: rotateZ(-45deg);
                background-color: $color-white;
                top: 0;
+               transform: rotateZ(-45deg);
             }
          }
          ~.mobile__drop {
@@ -120,14 +109,14 @@
          border-bottom: 2px solid $color-yellow;
       }
    }
-   @include responsiveMax(650px){
+   @include responsive--max(650px){
       & {
          .mobile__drop {
             border-bottom: 1px solid pink;
          }
       }
    }
-   @include responsiveMax(950px){
+   @include responsive--max(950px){
       & {
          ul {
             width: 90%;
@@ -139,15 +128,15 @@
          }
       }
    }
-   @include responsiveMax(1050px){
+   @include responsive--max(1050px){
       & {
          ul {
-            width: 80%;
-            left: 10%;
+            width: 90%;
+            left: 5%;
          }
       }
    }
-   @include responsiveMin(750px){
+   @include responsive--min(750px){
       & {
          ul {
             flex-direction: row;

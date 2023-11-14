@@ -10,13 +10,57 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-pink: pink;
 
-@mixin responsiveMin($breakpoint) {
-   @media only screen and (min-width: $breakpoint) {
-     @content;
-   }
- }
- @mixin responsiveMax($breakpoint) {
-   @media only screen and (max-width: $breakpoint) {
-     @content;
-   }
- }
+@mixin text__stroke($px: 2px, $color: white) {
+  color: transparent;
+  -webkit-text-stroke: $px $color;
+}
+
+@mixin border($px: 2px, $color: $color-char-grey-900) {
+  border: $px solid $color-char-grey-900;
+}
+
+@mixin margin--auto {
+  margin: auto;
+}
+
+@mixin flex__center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin before-after($width: 100%, $height: 100%) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+  position: absolute;
+}
+
+@mixin responsive--min($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin responsive--max($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin spacing--none() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin transition($prop: all, $dur: 300ms, $ease: ease-in-out) {
+  transition: $prop $dur $ease;
+}
+
+@mixin tranform-to-page($top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-$left, -$top);
+}

@@ -14,54 +14,53 @@
    }
 }
 
-@include responsiveMin(750px) {
+@include responsive--min(750px) {
    .animation {
      &__color-split {
-       transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
- 
-       :hover {
+       @include transition(box-shadow);
+       @include transition(color);
+       &:hover {
          box-shadow: 4px 4px $color-cyan,
            -4px -4px $color-magenta;
-         transition: box-shadow 200ms ease-in-out, color 200ms ease-in-out;
+           @include transition(box-shadow);
+           @include transition(color);
        }
      }
  
      &__pop-out {
        &-yellow {
          box-shadow: 0 0 0 0 $color-yellow;
-         transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
+         @include transition;
  
-         :hover {
+         &:hover {
            box-shadow: 10px 10px 0 0 $color-yellow;
            transform: translate(-10px, -10px);
-           transition: all 300ms ease-in-out;
+           @include transition;
          }
        }
  
        &-dark {
          box-shadow: 0 0 0 0 $color-char-grey-900;
-         transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, transform 300ms ease-in-out;
- 
-         :hover {
+         @include transition;
+         &:hover {
            box-shadow: 3px 3px 0 0 $color-char-grey-900;
            transform: translate(-3px, -3px);
-           transition: all 300ms ease-in-out;
+           @include transition;
          }
        }
      }
  
      &__slice-corners {
        img {
-         border: 2px solid $color-char-grey-900;
          clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
-         transition: clip-path 300ms ease-in-out;
+         @include transition(clip-path, 300ms);
+         @include border();
        }
  
-       :hover img {
-         -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
+       &:hover img {
          clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
-         border: 2px solid $color-char-grey-900;
-         transition: clip-path 300ms ease-in-out;
+         @include transition(clip-path, 300ms);
+         @include border();
        }
      }
  
@@ -70,20 +69,16 @@
          a {
            &:not(.logo) {
              &::before {
-               content: " ";
-               width: 80%;
-               height: 3px;
-               position: absolute;
                bottom: 2px;
                left: 10%;
                background-color: $color-yellow;
-               transition: all 300ms ease-in-out;
+               @include transition(all, 300ms);
+               @include before-after(80%, 3px);
              }
  
              &:hover::before {
                width: 60%;
                height: 2px;
-               position: absolute;
                bottom: 15%;
                left: 20%;
                background-color: $color-magenta;
@@ -99,14 +94,14 @@
            }
          }
  
-         transition: all 200ms ease-out;
+         @include transition();
        }
      }
    }
  }
  
 
-@include responsiveMax(650px){
+@include responsive--max(650px){
    .animation{
       &__title--text-shadow {
          text-shadow:
@@ -118,7 +113,7 @@
    }
 }
 
-@include responsiveMin(651px) {
+@include responsive--min(651px) {
    .animation__title--text-shadow {
       animation: spotlight 2.5s ease-in-out forwards running;
    }
@@ -159,12 +154,12 @@
    }
 }
 
-@include responsiveMax(850px) {
+@include responsive--max(850px) {
    .grid__animation-display {
       grid-template-columns: repeat(2, 1fr);
    }
 }
-@include responsiveMax(749px){
+@include responsive--max(749px){
    .animation{
       &__pop-out {
          &-yellow {
@@ -180,13 +175,13 @@
          img {
             -webkit-clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%); 
             clip-path: polygon(0% 15%, 15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%);
-            border: 2px solid $color-char-grey-900;
+            @include border();
          }
       }
       
   }
 }
-@include responsiveMax(575px) {
+@include responsive--max(575px) {
    .grid__animation-display {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(6, 1fr);

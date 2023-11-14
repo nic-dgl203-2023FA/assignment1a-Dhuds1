@@ -10,7 +10,7 @@
       padding: 8px;
       text-decoration: none;
       display: inline-block;
-      border: 1px solid $color-char-grey-900;
+      @include border(1px);
    }
    &__item {
       color: $color-char-grey-900;
@@ -28,11 +28,9 @@
          margin-top: 0;
       }
    }
-   @include responsiveMax(749px){
+   @include responsive--max(749px){
       &__item {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
+         @include flex__center-center;
 
          img {
             width: 400px;
@@ -46,7 +44,7 @@
          }
       }
    }
-   @include responsiveMax(500px){
+   @include responsive--max(500px){
       &__item {
          img {
             width: 300px;
@@ -60,7 +58,7 @@
          margin-bottom: 40px;
       }
    }
-   @include responsiveMin(750px){
+   @include responsive--min(750px){
       &__item {
          img {
             margin-right: 20px;

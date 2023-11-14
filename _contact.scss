@@ -10,13 +10,12 @@ footer {
          display: inline-block; 
       }
    }
-   @include responsiveMin(750px){
+   @include responsive--min(750px){
       .contact__list {
-         display: flex;
-         justify-content: center;
+         @include flex__center-center();
       }
    }
-   @include responsiveMax(749px){
+   @include responsive--max(749px){
       .contact__list{
          a{
             padding: 5px;

@@ -1,9 +1,8 @@
 *,
 *::before,
 *::after{
-   margin: 0;
-   padding: 0;
    box-sizing: inherit;
+   @include spacing--none;
 }
 html {
    font-size: 62.5%;
@@ -12,14 +11,12 @@ html {
    color-scheme: dark;
 }
 body {
-   background-color: coral;
-   margin: 0;
-   padding: 0;
-
+   background-color: $color-char-grey-900;
    font-family: 'Roboto', sans-serif;
-   
    font-size: 15px;
    line-height: 1.5;
+
+   @include spacing--none;
 }
 .heroBlock {
    height: 600px;
@@ -82,29 +79,29 @@ h1, h2{
 h3 {
    margin-bottom: 0;
 }
-.content-wrap, .contentWrapAnimation {
+.content-wrap{
    max-width: 800px;
    width: 85%;
-   margin: 0 auto;
    padding: 60px 0;
+   @include margin--auto;
+}
+.content-wrap__animation {
+   @extend .content-wrap;
 }
 .divider > section{
    position: relative;
-   padding: 25px 25px;
-   border: 2px solid $color-char-grey-900;
+   padding: 25px;
+   @include border();
 }
 .outline--text{
    &-stroke {
-      color: transparent;
-      -webkit-text-stroke: 3px #ffffff;
+      @include text__stroke(3px, white);
       &-bold {
-         color: transparent;
-         -webkit-text-stroke: 3px #ffffff;
+         @include text__stroke(3px, white);
       }
-      &-stroke-light {
-         color: transparent;
+      &-light {
          font-size: 55px;
-         -webkit-text-stroke: 2px #ffffff;
+         @include text__stroke(2px, white);
       }
    }
 }
@@ -113,16 +110,15 @@ h3 {
 
    h4{
       font-size: 3.6rem;
-      margin: 0;
       line-height: 1;
       margin-bottom: 5px;
+      @include spacing--none;
    }
    h3{
       font-size: 1.6rem;
       font-weight: 300;
-      margin: 0;
-      padding: 0;
       line-height: 1;
+      @include spacing--none;
    }
    p{
       font-weight: 600;
@@ -140,9 +136,7 @@ h3 {
    }
 }
 .flex-center-center {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   @include flex__center-center;
 }
 .padding-bottom--none {
    padding-bottom: none;
