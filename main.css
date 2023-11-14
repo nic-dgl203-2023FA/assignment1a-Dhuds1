@@ -404,6 +404,7 @@ h3 {
   overflow: hidden;
   margin-bottom: 50px;
   position: relative;
+  flex-direction: column;
 }
 .projects__item img {
   width: 300px;
